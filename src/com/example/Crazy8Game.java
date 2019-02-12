@@ -87,7 +87,7 @@ public class Crazy8Game {
 
         boolean roundEnded = false;
         while (!roundEnded) {
-            for (int playerNum = 1; playerNum < 5; playerNum++) {
+            for (int playerNum = 1; playerNum <= players.length; playerNum++) {
                 getPlayer(playerNum).playTurn();
                 //Check if the players turn caused the round to end
                 roundEnded = checkRoundEnded();
