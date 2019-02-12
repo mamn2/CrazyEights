@@ -104,6 +104,7 @@ public class Crazy8Game {
 
         //Now that the round ended, we need to add points based on a tie game or someone winning
         adjustPlayerScores(findRoundWinner());
+        printScores();
 
         return roundWinner;
 
@@ -317,6 +318,15 @@ public class Crazy8Game {
 
         return false;
 
+    }
+
+    /**
+     * Prints scores after each round
+     */
+    private void printScores() {
+        for (Player player : players) {
+            System.out.println("Player " + player.getPlayerId() + " has a score of: " + player.getPlayerScore());
+        }
     }
 
     /**
