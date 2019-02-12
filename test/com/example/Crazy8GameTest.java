@@ -182,4 +182,18 @@ public class Crazy8GameTest {
 
     }
 
+    @Test
+    public void tooManyPlayersTest() throws AssertionError {
+
+        boolean throwsException = false;
+        try {
+            crazy8Game = new Crazy8Game(9);
+        } catch (IllegalArgumentException e) {
+            throwsException = true;
+        }
+
+        assertTrue(throwsException);
+
+    }
+
 }
